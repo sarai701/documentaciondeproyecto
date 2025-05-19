@@ -1,0 +1,3 @@
+003,10000, se realizo el pago del prestamo? n
+001,1000, se realizo el pago del prestamo? y
+003,5000, se realizo el pago del prestamo? y
