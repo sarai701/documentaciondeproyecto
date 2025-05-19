@@ -33,6 +33,26 @@ void limpiarBufferEntrada() {
     cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 }
 
+void realizarBackup() { //Crea un carpeta llamado "backup" si no existe
+    // Crear directorio si no existe (Windows)
+    system("mkdir backup 2> nul");  //El "2> nul" redirige cualquier mensaje de error (por ejemplo, si ya existe) para no mostrarlo.
+    //Si los archivos de respaldo ya existen, se sobrescriben automáticamente.
+    // Lista de archivos a respaldar
+    const char* archivos[] = {
+        "clientes.txt", "proveedores.txt", "empleados.txt",
+        "movimientos.txt", "prestamos.txt", "bitacora.txt",
+        "auditores.txt", "pagos.txt", "salarios.txt"
+    };
+
+    // Copiar cada archivo sobrescribiendo el anterior
+    for (const char* archivo : archivos) {
+        string comando = "copy /Y " + string(archivo) + // - copy /Y: copia el archivo y sobrescribe el existente sin preguntar
+                        " backup\\" + string(archivo) + ".bak > nul"; //archivo.bak: destino del archivo, con extensión .bak
+        system(comando.c_str());                                      //// - > nul: redirige la salida estándar para evitar mostrar mensajes
+    }
+}
+
+
 // Función que muestra el menú Archivo, recibe el usuario actual y un objeto bitácora para registrar acciones
 void menuArchivo(const string& usuario, Bitacora& bitacora) {
     Usuario::limpiarPantalla(); // Llama a método para limpiar la pantalla (generalmente usando sistema operativo)
@@ -56,9 +76,9 @@ void menuArchivo(const string& usuario, Bitacora& bitacora) {
 
         switch (opcion) {
             case 1:
-                //backup del sistema
-                cout << "\n[Simulando backup de archivos del sistema...]\n";
-                bitacora.insertar(usuario, 4905, "Sistema", "Realizó backup del sistema");
+                realizarBackup();
+                cout << "\nBackup realizado exitosamente!\n";
+                bitacora.insertar(usuario, 4905, "Sistema", "Backup realizado");
                 break;
 
             case 2:
