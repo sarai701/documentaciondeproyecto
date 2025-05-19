@@ -2238,7 +2238,137 @@
 	<fstream>
 	<algorithm>
 
+<<<<<<< HEAD
 1747645175 source:c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\main.cpp
+=======
+1747647000 source:c:\users\pc\documents\proyectodocuemntacionnn\documentaciondeproyecto\menusistemabancobackup\src\auditoria.cpp
+	"Auditoria.h"
+	<iostream>
+	<fstream>
+	"Bitacora.h"
+	<cstdlib>
+
+1747647000 c:\users\pc\documents\proyectodocuemntacionnn\documentaciondeproyecto\menusistemabancobackup\include\auditoria.h
+	<string>
+	<vector>
+	"Bitacora.h"
+
+1747644427 c:\users\pc\documents\proyectodocuemntacionnn\documentaciondeproyecto\menusistemabancobackup\include\bitacora.h
+	<string>
+
+1747646999 source:c:\users\pc\documents\proyectodocuemntacionnn\documentaciondeproyecto\menusistemabancobackup\src\bancos.cpp
+	"Bancos.h"
+	"Moneda.h"
+	<iostream>
+
+1747647000 c:\users\pc\documents\proyectodocuemntacionnn\documentaciondeproyecto\menusistemabancobackup\include\bancos.h
+	<string>
+	"Bitacora.h"
+	"Moneda.h"
+
+1747644427 c:\users\pc\documents\proyectodocuemntacionnn\documentaciondeproyecto\menusistemabancobackup\include\moneda.h
+	"Bitacora.h"
+	<string>
+
+1747644427 source:c:\users\pc\documents\proyectodocuemntacionnn\documentaciondeproyecto\menusistemabancobackup\src\bitacora.cpp
+	"Bitacora.h"
+	<fstream>
+	<iostream>
+	<iomanip>
+	<ctime>
+	<cstring>
+
+1747644427 source:c:\users\pc\documents\proyectodocuemntacionnn\documentaciondeproyecto\menusistemabancobackup\src\cliente.cpp
+	"Cliente.h"
+	"Bitacora.h"
+	<iostream>
+	<fstream>
+	<vector>
+	<algorithm>
+
+1747644427 c:\users\pc\documents\proyectodocuemntacionnn\documentaciondeproyecto\menusistemabancobackup\include\cliente.h
+	<string>
+	<vector>
+	"Bitacora.h"
+
+1747644427 source:c:\users\pc\documents\proyectodocuemntacionnn\documentaciondeproyecto\menusistemabancobackup\src\contabilidad.cpp
+	"Contabilidad.h"
+	<vector>
+	<sstream>
+	<iomanip>
+	<algorithm>
+	"Bitacora.h"
+	"Moneda.h"
+	<cstdlib>
+
+1747644427 c:\users\pc\documents\proyectodocuemntacionnn\documentaciondeproyecto\menusistemabancobackup\include\contabilidad.h
+	<iostream>
+	<fstream>
+	<string>
+	"Bitacora.h"
+
+1747644427 source:c:\users\pc\documents\proyectodocuemntacionnn\documentaciondeproyecto\menusistemabancobackup\src\cuentas.cpp
+	"Cuentas.h"
+	<iostream>
+
+1747644427 c:\users\pc\documents\proyectodocuemntacionnn\documentaciondeproyecto\menusistemabancobackup\include\cuentas.h
+	<string>
+	"Bitacora.h"
+
+1747644427 source:c:\users\pc\documents\proyectodocuemntacionnn\documentaciondeproyecto\menusistemabancobackup\src\empleados.cpp
+	"Empleados.h"
+	<iostream>
+	<fstream>
+	<algorithm>
+	"Bitacora.h"
+
+1747644427 c:\users\pc\documents\proyectodocuemntacionnn\documentaciondeproyecto\menusistemabancobackup\include\empleados.h
+	<vector>
+	<string>
+	"Bitacora.h"
+
+1747644427 source:c:\users\pc\documents\proyectodocuemntacionnn\documentaciondeproyecto\menusistemabancobackup\src\moneda.cpp
+	"Moneda.h"
+	"Bitacora.h"
+	<iostream>
+
+1747644427 source:c:\users\pc\documents\proyectodocuemntacionnn\documentaciondeproyecto\menusistemabancobackup\src\nominas.cpp
+	"Nominas.h"
+	<iostream>
+	<fstream>
+	<algorithm>
+	"Bitacora.h"
+	"Moneda.h"
+
+1747644427 c:\users\pc\documents\proyectodocuemntacionnn\documentaciondeproyecto\menusistemabancobackup\include\nominas.h
+	<string>
+	<vector>
+	"Bitacora.h"
+	"Moneda.h"
+
+1747644427 source:c:\users\pc\documents\proyectodocuemntacionnn\documentaciondeproyecto\menusistemabancobackup\src\proveedores.cpp
+	"Proveedores.h"
+	<iostream>
+	<fstream>
+	<algorithm>
+
+1747644427 c:\users\pc\documents\proyectodocuemntacionnn\documentaciondeproyecto\menusistemabancobackup\include\proveedores.h
+	<string>
+	<vector>
+
+1747644427 source:c:\users\pc\documents\proyectodocuemntacionnn\documentaciondeproyecto\menusistemabancobackup\src\usuario.cpp
+	"Usuario.h"
+	<iostream>
+	<fstream>
+	<conio.h>
+	<cstdlib>
+
+1747644427 c:\users\pc\documents\proyectodocuemntacionnn\documentaciondeproyecto\menusistemabancobackup\include\usuario.h
+	"Bitacora.h"
+	<string>
+
+1747646142 source:c:\users\pc\documents\proyectodocuemntacionnn\documentaciondeproyecto\menusistemabancobackup\main.cpp
+>>>>>>> 57d0ed804ed2a24b66f5b656ec676d5e078a380c
 	<iostream>
 	<fstream>
 	<string>
@@ -2255,6 +2385,7 @@
 	"Moneda.h"
 	<limits>
 
+<<<<<<< HEAD
 1747640191 c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\include\empleados.h
 	<vector>
 	<string>
@@ -2381,3 +2512,5 @@
 	"Bitacora.h"
 	"Moneda.h"
 
+=======
+>>>>>>> 57d0ed804ed2a24b66f5b656ec676d5e078a380c
