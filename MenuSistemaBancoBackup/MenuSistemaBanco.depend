@@ -2103,3 +2103,138 @@
 	"Bitacora.h"
 	"Moneda.h"
 
+1747628954 source:c:\users\deleo\onedrive\desktop\copias\menusistemabancobackup\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	"Empleados.h"
+	"Cliente.h"
+	"Proveedores.h"
+	"Contabilidad.h"
+	"Auditoria.h"
+	"Usuario.h"
+	<conio.h>
+	"Nominas.h"
+	"Bitacora.h"
+	"Bancos.h"
+	"Moneda.h"
+	<limits>
+
+1747015541 c:\users\deleo\onedrive\desktop\copias\menusistemabancobackup\include\empleados.h
+	<vector>
+	<string>
+	"Bitacora.h"
+
+1747604867 c:\users\deleo\onedrive\desktop\copias\menusistemabancobackup\include\bitacora.h
+	<string>
+
+1747604867 c:\users\deleo\onedrive\desktop\copias\menusistemabancobackup\include\cliente.h
+	<string>
+	<vector>
+	"Bitacora.h"
+
+1747636833 c:\users\deleo\onedrive\desktop\copias\menusistemabancobackup\include\proveedores.h
+	<string>
+	<vector>
+
+1747015541 c:\users\deleo\onedrive\desktop\copias\menusistemabancobackup\include\contabilidad.h
+	<iostream>
+	<fstream>
+	<string>
+	"Bitacora.h"
+
+1747015541 c:\users\deleo\onedrive\desktop\copias\menusistemabancobackup\include\auditoria.h
+	<string>
+	<vector>
+	"Bitacora.h"
+
+1747015541 c:\users\deleo\onedrive\desktop\copias\menusistemabancobackup\include\usuario.h
+	"Bitacora.h"
+	<string>
+
+1747628954 c:\users\deleo\onedrive\desktop\copias\menusistemabancobackup\include\nominas.h
+	<string>
+	<vector>
+	"Bitacora.h"
+	"Moneda.h"
+
+1747604867 c:\users\deleo\onedrive\desktop\copias\menusistemabancobackup\include\moneda.h
+	"Bitacora.h"
+	<string>
+
+1747604867 c:\users\deleo\onedrive\desktop\copias\menusistemabancobackup\include\bancos.h
+	<string>
+	"Bitacora.h"
+	"Moneda.h"
+
+1747015541 source:c:\users\deleo\onedrive\desktop\copias\menusistemabancobackup\src\auditoria.cpp
+	"Auditoria.h"
+	<iostream>
+	<fstream>
+	"Bitacora.h"
+	<cstdlib>
+
+1747604867 source:c:\users\deleo\onedrive\desktop\copias\menusistemabancobackup\src\bancos.cpp
+	"Bancos.h"
+	"Moneda.h"
+	<iostream>
+
+1747636775 source:c:\users\deleo\onedrive\desktop\copias\menusistemabancobackup\src\bitacora.cpp
+	"Bitacora.h"
+	<fstream>
+	<iostream>
+	<iomanip>
+	<ctime>
+	<cstring>
+
+1747020613 source:c:\users\deleo\onedrive\desktop\copias\menusistemabancobackup\src\contabilidad.cpp
+	"Contabilidad.h"
+	<vector>
+	<sstream>
+	<iomanip>
+	<algorithm>
+	"Bitacora.h"
+	"Moneda.h"
+	<cstdlib>
+
+1747628954 source:c:\users\deleo\onedrive\desktop\copias\menusistemabancobackup\src\cuentas.cpp
+	"Cuentas.h"
+	<iostream>
+
+1747628954 c:\users\deleo\onedrive\desktop\copias\menusistemabancobackup\include\cuentas.h
+	<string>
+	"Bitacora.h"
+
+1747628954 source:c:\users\deleo\onedrive\desktop\copias\menusistemabancobackup\src\empleados.cpp
+	"Empleados.h"
+	<iostream>
+	<fstream>
+	<algorithm>
+	"Bitacora.h"
+
+1747604867 source:c:\users\deleo\onedrive\desktop\copias\menusistemabancobackup\src\moneda.cpp
+	"Moneda.h"
+	"Bitacora.h"
+	<iostream>
+
+1747628954 source:c:\users\deleo\onedrive\desktop\copias\menusistemabancobackup\src\nominas.cpp
+	"Nominas.h"
+	<iostream>
+	<fstream>
+	<algorithm>
+	"Bitacora.h"
+	"Moneda.h"
+
+1747015541 source:c:\users\deleo\onedrive\desktop\copias\menusistemabancobackup\src\usuario.cpp
+	"Usuario.h"
+	<iostream>
+	<fstream>
+	<conio.h>
+	<cstdlib>
+
+1747637001 source:c:\users\deleo\onedrive\desktop\copias\menusistemabancobackup\src\proveedores.cpp
+	"Proveedores.h"
+	<iostream>
+	<fstream>
+	<algorithm>
+

@@ -56,7 +56,7 @@ void Cliente::cargarClientes() {
     ordenarClientes();
 }
 
-// Guarda todos los clientes en el archivo clientes.txt
+// Guarda todos los clientes en el archivo clientes
 void Cliente::guardarClientes() {
     ofstream archivo("clientes.txt");
     for (const auto& c : clientes) {
@@ -246,11 +246,11 @@ void Cliente::modificarCliente() {
         }
     }
 
-    if (modificado) {
-        ordenarClientes();
-        guardarClientes();
-        log.insertar("Admin", 4103, "Clientes", "Modificar Cliente");
 
+if (modificado) { // Si se realizó alguna modificación en el cliente:
+    ordenarClientes(); // Ordena la lista de clientes para mantener el orden alfabético o lógico.
+    guardarClientes(); // Guarda la lista actualizada de clientes en el archivo correspondiente,
+    log.insertar("Admin", 4103, "Clientes", "Modificar Cliente"); // Registra la acción realizada en la bitácora del sistema
         cout << "\nCliente modificado exitosamente.";
     } else {
         cout << "\nCliente no encontrado.";
@@ -292,7 +292,7 @@ void Cliente::registrarMovimiento() {
     getline(cin, codigoCliente);
 
     bool encontrado = false;
-    for (const auto& c : clientes) {
+    for (const auto& c : clientes) {   // Recorre cada cliente dentro del vector 'clientes'.
         if (c.codigo == codigoCliente) {
             encontrado = true;
             cout << "Descripción del movimiento: ";
@@ -323,26 +323,27 @@ void Cliente::registrarMovimiento() {
 
 
 void Cliente::mostrarMovimientos() {
-    limpiarPantalla();
-    string codigoCliente, linea;
-    cout << "\n=== Mostrar Movimientos ===";
-    cout << "\nCódigo del Cliente: ";
-    cin.ignore();
-    getline(cin, codigoCliente);
+    limpiarPantalla();                         // Limpia la pantalla antes de mostrar información.
+    string codigoCliente, linea;               // Declara variables para código del cliente y línea leída.
+    cout << "\n=== Mostrar Movimientos ===";   // Muestra título del menú.
+    cout << "\nCódigo del Cliente: ";          // Solicita al usuario ingresar el código del cliente.
+    cin.ignore();                             // Limpia el buffer de entrada para evitar errores.
+    getline(cin, codigoCliente);              // Lee el código del cliente ingresado por el usuario.
 
-    ifstream archivo("movimientos.txt");
-    bool hayMovimientos = false;
+    ifstream archivo("movimientos.txt");      // Abre el archivo con los movimientos.
+    bool hayMovimientos = false;               // Variable para saber si hay movimientos encontrados.
 
-    while (getline(archivo, linea)) {
-        size_t pos = linea.find(',');
-        string codigo = linea.substr(0, pos);
-        string descripcion = linea.substr(pos + 1);
+    while (getline(archivo, linea)) {          // Lee línea por línea el archivo.
+        size_t pos = linea.find(',');          // Encuentra la posición de la coma separadora.
+        string codigo = linea.substr(0, pos);  // Extrae el código del cliente de la línea.
+        string descripcion = linea.substr(pos + 1); // Extrae la descripción del movimiento.
 
-        if (codigo == codigoCliente) {
-            cout << "\n- " << descripcion;
-            hayMovimientos = true;
+        if (codigo == codigoCliente) {          // Compara el código leído con el ingresado.
+            cout << "\n- " << descripcion;      // Muestra la descripción del movimiento.
+            hayMovimientos = true;               // Marca que sí hay movimientos para este cliente.
         }
     }
+
 
     archivo.close();
 
@@ -354,84 +355,85 @@ void Cliente::mostrarMovimientos() {
 }
 
 void Cliente::abrirArchivoMovimientos() {
-    limpiarPantalla();
-    cout << "\n=== Contenido del archivo movimientos.txt ===\n";
+    limpiarPantalla();                       // Limpia la pantalla antes de mostrar contenido.
+    cout << "\n=== Contenido del archivo movimientos.txt ===\n";  // Muestra título.
 
-    ifstream archivo("movimientos.txt");
-    string linea;
-    while (getline(archivo, linea)) {
-        cout << linea << "\n";
+    ifstream archivo("movimientos.txt");    // Abre el archivo de movimientos en modo lectura.
+    string linea;                           // Variable para almacenar cada línea leída.
+    while (getline(archivo, linea)) {      // Lee línea por línea hasta el final del archivo.
+        cout << linea << "\n";              // Imprime cada línea del archivo en pantalla.
     }
-    archivo.close();
+    archivo.close();                        // Cierra el archivo después de leerlo.
 
-    pausar();
+    pausar();                              // Pausa el programa hasta que el usuario presione ENTER.
 }
 
+
 void Cliente::registrarPrestamo() {
-    limpiarPantalla();
-    string codigoCliente, estado;
-    double monto;
-    cout << "\n=== Registrar Préstamo ===";
-    cout << "\nCódigo del Cliente: ";
-    cin.ignore();
-    getline(cin, codigoCliente);
+    limpiarPantalla();                                // Limpia pantalla antes de iniciar.
+    string codigoCliente, estado;                      // Variables para código y estado del préstamo.
+    double monto;                                      // Variable para monto del préstamo.
+    cout << "\n=== Registrar Préstamo ===";            // Muestra título de la función.
+    cout << "\nCódigo del Cliente: ";                  // Solicita código del cliente.
+    cin.ignore();                                      // Ignora caracteres previos en el buffer.
+    getline(cin, codigoCliente);                       // Lee el código del cliente.
 
-    bool encontrado = false;
-    for (const auto& c :clientes) {
-        if (c.codigo == codigoCliente) {
-            encontrado = true;
-            cout << "Monto del préstamo: ";
-            cin >> monto;
-            cin.ignore();
-            cout << "¿Está pagado? (Sí/No): ";
-            getline(cin, estado);
+    bool encontrado = false;                           // Variable para verificar si cliente existe.
+    for (const auto& c :clientes) {                    // Itera sobre todos los clientes.
+        if (c.codigo == codigoCliente) {               // Verifica si el código coincide.
+            encontrado = true;                         // Marca cliente como encontrado.
+            cout << "Monto del préstamo: ";            // Solicita monto del préstamo.
+            cin >> monto;                              // Lee el monto.
+            cin.ignore();                              // Limpia buffer después de entrada numérica.
+            cout << "¿Está pagado? (Sí/No): ";         // Pregunta estado del pago.
+            getline(cin, estado);                       // Lee el estado del préstamo.
 
-            ofstream archivo("prestamos.txt", ios::app);
-            archivo << codigoCliente << "," << monto << ", se realizo el pago del prestamo? " << estado << "\n";
-            archivo.close();
+            ofstream archivo("prestamos.txt", ios::app); // Abre archivo para agregar datos.
+            archivo << codigoCliente << "," << monto << ", se realizo el pago del prestamo? " << estado << "\n"; // Escribe datos en archivo.
+            archivo.close();                            // Cierra el archivo.
 
-            cout << "\nPréstamo registrado correctamente.";
-            log.insertar("Admin", 5201, "Préstamos", "Registrar Préstamo");
-            break;
+            cout << "\nPréstamo registrado correctamente."; // Mensaje de confirmación.
+            log.insertar("Admin", 5201, "Préstamos", "Registrar Préstamo"); // Registra acción en bitácora.
+            break;                                     // Sale del ciclo al encontrar el cliente.
         }
     }
 
-    if (!encontrado) {
-        cout << "\nCliente no encontrado.";
+    if (!encontrado) {                                 // Si cliente no fue encontrado.
+        cout << "\nCliente no encontrado.";            // Muestra mensaje de error.
     }
 
-    pausar();
+    pausar();                                         // Pausa hasta que usuario presione ENTER.
 }
 
 void Cliente::mostrarPrestamos() {
-    limpiarPantalla();
-    string codigoCliente, linea;
-    cout << "\n=== Mostrar Préstamos ===";
-    cout << "\nCódigo del Cliente: ";
-    cin.ignore();
-    getline(cin, codigoCliente);
+    limpiarPantalla();                                // Limpia pantalla antes de mostrar préstamos.
+    string codigoCliente, linea;                       // Variables para código y línea leída.
+    cout << "\n=== Mostrar Préstamos ===";             // Muestra título.
+    cout << "\nCódigo del Cliente: ";                  // Solicita código del cliente.
+    cin.ignore();                                      // Ignora caracteres previos.
+    getline(cin, codigoCliente);                       // Lee código del cliente.
 
-    ifstream archivo("prestamos.txt");
-    bool hayPrestamos = false;
+    ifstream archivo("prestamos.txt");                 // Abre archivo de préstamos.
+    bool hayPrestamos = false;                          // Indicador si hay préstamos para cliente.
 
-    while (getline(archivo, linea)) {
-        size_t pos1 = linea.find(',');
-        size_t pos2 = linea.find(',', pos1 + 1);
-        string codigo = linea.substr(0, pos1);
-        string monto = linea.substr(pos1 + 1, pos2 - pos1 - 1);
-        string estado = linea.substr(pos2 + 1);
+    while (getline(archivo, linea)) {                   // Lee línea por línea.
+        size_t pos1 = linea.find(',');                  // Encuentra primer separador.
+        size_t pos2 = linea.find(',', pos1 + 1);        // Encuentra segundo separador.
+        string codigo = linea.substr(0, pos1);           // Extrae código cliente.
+        string monto = linea.substr(pos1 + 1, pos2 - pos1 - 1); // Extrae monto.
+        string estado = linea.substr(pos2 + 1);          // Extrae estado del préstamo.
 
-        if (codigo == codigoCliente) {
-            cout << "\nMonto: Q." << monto << " - Estado: " << estado;
-            hayPrestamos = true;
+        if (codigo == codigoCliente) {                   // Si el código coincide con el cliente.
+            cout << "\nMonto: Q." << monto << " - Estado: " << estado; // Muestra préstamo.
+            hayPrestamos = true;                         // Marca que hay préstamos.
         }
     }
 
-    archivo.close();
+    archivo.close();                                    // Cierra archivo.
 
-    if (!hayPrestamos) {
-        cout << "\nNo hay préstamos registrados para este cliente.";
+    if (!hayPrestamos) {                               // Si no hay préstamos.
+        cout << "\nNo hay préstamos registrados para este cliente."; // Muestra mensaje.
     }
 
-    pausar();
+    pausar();                                          // Pausa hasta que usuario presione ENTER.
 }
