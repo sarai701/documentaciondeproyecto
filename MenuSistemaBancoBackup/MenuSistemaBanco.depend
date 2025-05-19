@@ -2238,3 +2238,146 @@
 	<fstream>
 	<algorithm>
 
+1747645175 source:c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	"Empleados.h"
+	"Cliente.h"
+	"Proveedores.h"
+	"Contabilidad.h"
+	"Auditoria.h"
+	"Usuario.h"
+	<conio.h>
+	"Nominas.h"
+	"Bitacora.h"
+	"Bancos.h"
+	"Moneda.h"
+	<limits>
+
+1747640191 c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\include\empleados.h
+	<vector>
+	<string>
+	"Bitacora.h"
+
+1747640191 c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\include\bitacora.h
+	<string>
+
+1747640191 c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\include\cliente.h
+	<string>
+	<vector>
+	"Bitacora.h"
+
+1747640192 c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\include\proveedores.h
+	<string>
+	<vector>
+
+1747640191 c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\include\contabilidad.h
+	<iostream>
+	<fstream>
+	<string>
+	"Bitacora.h"
+
+1747640191 c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\include\auditoria.h
+	<string>
+	<vector>
+	"Bitacora.h"
+
+1747640192 c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\include\usuario.h
+	"Bitacora.h"
+	<string>
+
+1747645269 c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\include\nominas.h
+	<string>
+	<vector>
+	"Bitacora.h"
+	"Moneda.h"
+
+1747640191 c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\include\moneda.h
+	"Bitacora.h"
+	<string>
+
+1747640191 c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\include\bancos.h
+	<string>
+	"Bitacora.h"
+	"Moneda.h"
+
+1747640192 source:c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\src\auditoria.cpp
+	"Auditoria.h"
+	<iostream>
+	<fstream>
+	"Bitacora.h"
+	<cstdlib>
+
+1747640192 source:c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\src\bancos.cpp
+	"Bancos.h"
+	"Moneda.h"
+	<iostream>
+
+1747640192 source:c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\src\bitacora.cpp
+	"Bitacora.h"
+	<fstream>
+	<iostream>
+	<iomanip>
+	<ctime>
+	<cstring>
+
+1747640192 source:c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\src\cliente.cpp
+	"Cliente.h"
+	"Bitacora.h"
+	<iostream>
+	<fstream>
+	<vector>
+	<algorithm>
+
+1747640192 source:c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\src\contabilidad.cpp
+	"Contabilidad.h"
+	<vector>
+	<sstream>
+	<iomanip>
+	<algorithm>
+	"Bitacora.h"
+	"Moneda.h"
+	<cstdlib>
+
+1747640192 source:c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\src\cuentas.cpp
+	"Cuentas.h"
+	<iostream>
+
+1747640191 c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\include\cuentas.h
+	<string>
+	"Bitacora.h"
+
+1747640192 source:c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\src\empleados.cpp
+	"Empleados.h"
+	<iostream>
+	<fstream>
+	<algorithm>
+	"Bitacora.h"
+
+1747640192 source:c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\src\moneda.cpp
+	"Moneda.h"
+	"Bitacora.h"
+	<iostream>
+
+1747640192 source:c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\src\proveedores.cpp
+	"Proveedores.h"
+	<iostream>
+	<fstream>
+	<algorithm>
+
+1747640192 source:c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\src\usuario.cpp
+	"Usuario.h"
+	<iostream>
+	<fstream>
+	<conio.h>
+	<cstdlib>
+
+1747645431 source:c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\src\nominas.cpp
+	"Nominas.h"
+	<iostream>
+	<fstream>
+	<algorithm>
+	"Bitacora.h"
+	"Moneda.h"
+

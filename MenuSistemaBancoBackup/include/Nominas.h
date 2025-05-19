@@ -21,8 +21,8 @@ struct EmpleadoNomina {
 class Nominas {
 private:
     vector<EmpleadoNomina> empleados;   // Lista en memoria de empleados
-    void cargarEmpleados();             // Carga los datos desde nominas.txt
-    void guardarEmpleados();            // Guarda todos los datos en nominas.txt
+    void cargarEmpleados();             // Carga los datos desde empleados.txt
+    void guardarEmpleados();            // Guarda todos los datos en empleados.txt
     void ordenarEmpleados();            // Ordena los empleados por código
 
 public:
