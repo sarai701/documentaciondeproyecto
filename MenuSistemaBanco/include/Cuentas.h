@@ -1,19 +1,22 @@
-#ifndef CUENTAS_H
-#define CUENTAS_H
+//Karla Ruiz 9959-24-6859
+#ifndef CUENTAS_H // Verifica si CUENTAS_H no ha sido definido.
+#define CUENTAS_H // Define CUENTAS_H para evitar inclusiones múltiples.
 
-#include <string>
-#include "Bitacora.h"
+#include <string> // Incluye la biblioteca para manejar cadenas de texto.
+#include "Bitacora.h" // Incluye el encabezado de la clase Bitacora.
 
-class Cuentas {
+using namespace std;
+class Cuentas { // Define la clase Cuentas.
 private:
-    std::string tipoCuentaSeleccionada;
-    static Bitacora bitacoraCuentas;
+    string usuario;//bitacora
+    string tipoCuentaSeleccionada; // Almacena el tipo de cuenta seleccionada.
+
 
 public:
-    Cuentas();
-
-    void menuTipoCuenta(const std::string& bancoNombre);
-    std::string getTipoCuenta() const;
+    Cuentas(); // Constructor de la clase Cuentas.
+void setUsuario(const string& u);//bitacora
+    void menuTipoCuenta(const string& bancoNombre); // Método para mostrar el menú de tipos de cuenta.
+    string getTipoCuenta() const; // Método para obtener el tipo de cuenta seleccionada.
 };
 
-#endif
+#endif // Fin de la directiva de inclusión condicional.

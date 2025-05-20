@@ -2238,9 +2238,25 @@
 	<fstream>
 	<algorithm>
 
-<<<<<<< HEAD
-1747645175 source:c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\main.cpp
-=======
+1747646142 D
+
+1747647776 source:c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	"Empleados.h"
+	"Cliente.h"
+	"Proveedores.h"
+	"Contabilidad.h"
+	"Auditoria.h"
+	"Usuario.h"
+	<conio.h>
+	"Nominas.h"
+	"Bitacora.h"
+	"Bancos.h"
+	"Moneda.h"
+	<limits>
+
 1747647000 source:c:\users\pc\documents\proyectodocuemntacionnn\documentaciondeproyecto\menusistemabancobackup\src\auditoria.cpp
 	"Auditoria.h"
 	<iostream>
@@ -2368,7 +2384,8 @@
 	<string>
 
 1747646142 source:c:\users\pc\documents\proyectodocuemntacionnn\documentaciondeproyecto\menusistemabancobackup\main.cpp
->>>>>>> 57d0ed804ed2a24b66f5b656ec676d5e078a380c
+
+1747645431 0ed804ed2a24b66f5b656ec676d5e078a380c
 	<iostream>
 	<fstream>
 	<string>
@@ -2385,7 +2402,6 @@
 	"Moneda.h"
 	<limits>
 
-<<<<<<< HEAD
 1747640191 c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\include\empleados.h
 	<vector>
 	<string>
@@ -2409,7 +2425,7 @@
 	<string>
 	"Bitacora.h"
 
-1747640191 c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\include\auditoria.h
+1747647776 c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\include\auditoria.h
 	<string>
 	<vector>
 	"Bitacora.h"
@@ -2428,19 +2444,19 @@
 	"Bitacora.h"
 	<string>
 
-1747640191 c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\include\bancos.h
+1747647776 c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\include\bancos.h
 	<string>
 	"Bitacora.h"
 	"Moneda.h"
 
-1747640192 source:c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\src\auditoria.cpp
+1747647776 source:c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\src\auditoria.cpp
 	"Auditoria.h"
 	<iostream>
 	<fstream>
 	"Bitacora.h"
 	<cstdlib>
 
-1747640192 source:c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\src\bancos.cpp
+1747647776 source:c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\src\bancos.cpp
 	"Bancos.h"
 	"Moneda.h"
 	<iostream>
@@ -2461,7 +2477,7 @@
 	<vector>
 	<algorithm>
 
-1747640192 source:c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\src\contabilidad.cpp
+1747647776 source:c:\users\prisc\onedrive\documentos\documentaciondeproyecto\documentaciondeproyecto\menusistemabancobackup\src\contabilidad.cpp
 	"Contabilidad.h"
 	<vector>
 	<sstream>
@@ -2512,5 +2528,5 @@
 	"Bitacora.h"
 	"Moneda.h"
 
-=======
->>>>>>> 57d0ed804ed2a24b66f5b656ec676d5e078a380c
+1747645431 
+

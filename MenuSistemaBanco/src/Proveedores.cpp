@@ -3,12 +3,12 @@
 #include <iostream>
 #include <fstream>
 #include <algorithm>
+#include "Bitacora.h"
 
 using namespace std;
+Bitacora bitacoralogProveedores;
 
 // Limpia la pantalla según el sistema operativo
-// Parámetros: ninguno
-// Retorna: void
 void Proveedor::limpiarPantalla() {
 #ifdef _WIN32
     system("cls");
@@ -18,8 +18,6 @@ void Proveedor::limpiarPantalla() {
 }
 
 // Pausa el programa hasta que el usuario presione ENTER
-// Parámetros: ninguno
-// Retorna: void
 void Proveedor::pausar() {
     cout << "\nPresione ENTER para continuar...";
     cin.ignore();
@@ -27,8 +25,6 @@ void Proveedor::pausar() {
 }
 
 // Carga los proveedores desde el archivo binario "proveedores.dat"
-// Parámetros: ninguno
-// Retorna: vector<Proveedor> con los proveedores cargados, ordenados alfabéticamente por nombre
 vector<Proveedor> Proveedor::cargarProveedores() {
     vector<Proveedor> proveedores;
     ifstream archivo("proveedores.dat", ios::binary);
@@ -70,9 +66,6 @@ vector<Proveedor> Proveedor::cargarProveedores() {
 }
 
 // Guarda todos los proveedores en el archivo binario "proveedores.dat"
-// Parámetros:
-//   - proveedores: vector de proveedores a guardar
-// Retorna: void
 void Proveedor::guardarProveedores(const vector<Proveedor>& proveedores) {
     ofstream archivo("proveedores.dat", ios::binary | ios::trunc);
     for (const auto& p : proveedores) {
@@ -102,22 +95,22 @@ void Proveedor::guardarProveedores(const vector<Proveedor>& proveedores) {
 }
 
 // Ordena el vector de proveedores alfabéticamente por nombre
-// Parámetros:
-//   - proveedores: vector de proveedores a ordenar (por referencia)
-// Retorna: void
 void Proveedor::ordenarProveedores(vector<Proveedor>& proveedores) {
     sort(proveedores.begin(), proveedores.end(), [](const Proveedor& a, const Proveedor& b) {
         return a.nombre < b.nombre;
     });
 }
 
+void Proveedor::setUsuario(const string& u) {
+    usuario = u;
+}
+
 // Muestra el menú principal para la gestión de proveedores
-// Parámetros: ninguno
-// Retorna: void
 void Proveedor::menuProveedor() {
     int opcion;
     do {
         limpiarPantalla();
+        cout << "\nUsuario: " << usuario << endl;
         cout << "\n===== MENÚ DE PROVEEDORES =====";
         cout << "\n1. Crear Proveedor";
         cout << "\n2. Borrar Proveedor";
@@ -146,13 +139,12 @@ void Proveedor::menuProveedor() {
 }
 
 // Crea un nuevo proveedor solicitando datos al usuario y lo guarda
-// Parámetros: ninguno
-// Retorna: void
 void Proveedor::crearProveedor() {
     limpiarPantalla();
     Proveedor p;
     vector<Proveedor> proveedores = cargarProveedores();
 
+    cout << "\nUsuario: " << usuario << endl;
     cout << "\n=== Crear Proveedor ===";
     cout << "\nCódigo: "; getline(cin, p.codigo);
     cout << "Nombre: "; getline(cin, p.nombre);
@@ -162,17 +154,16 @@ void Proveedor::crearProveedor() {
     proveedores.push_back(p);
     ordenarProveedores(proveedores);
     guardarProveedores(proveedores);
-
+    bitacoralogProveedores.insertar(usuario, 4011, "Proveedores", "Crear Proveedor");
     cout << "\nProveedor agregado correctamente.";
     pausar();
 }
 
 // Borra un proveedor buscándolo por código
-// Parámetros: ninguno
-// Retorna: void
 void Proveedor::borrarProveedor() {
     limpiarPantalla();
     string codigo;
+    cout << "\nUsuario: " << usuario << endl;
     cout << "\n=== Borrar Proveedor ===";
     cout << "\nCódigo: "; getline(cin, codigo);
 
@@ -188,6 +179,7 @@ void Proveedor::borrarProveedor() {
 
     if (proveedores.size() < inicial) {
         guardarProveedores(proveedores);
+        bitacoralogProveedores.insertar(usuario, 4012, "Proveedores", "Borrar Proveedor");
         cout << "\nProveedor eliminado correctamente.";
     } else {
         cout << "\nProveedor no encontrado.";
@@ -197,11 +189,10 @@ void Proveedor::borrarProveedor() {
 }
 
 // Busca un proveedor por código y muestra su información
-// Parámetros: ninguno
-// Retorna: void
 void Proveedor::buscarProveedor() {
     limpiarPantalla();
     string codigo;
+    cout << "\nUsuario: " << usuario << endl;
     cout << "\n=== Buscar Proveedor ===";
     cout << "\nCódigo: "; getline(cin, codigo);
 
@@ -210,12 +201,14 @@ void Proveedor::buscarProveedor() {
 
     for (const auto& p : proveedores) {
         if (p.codigo == codigo) {
+            cout << "\nUsuario: " << usuario << endl;
             cout << "\nProveedor encontrado:";
             cout << "\nCódigo    : " << p.codigo;
             cout << "\nNombre    : " << p.nombre;
             cout << "\nTeléfono  : " << p.telefono;
             cout << "\nDirección : " << p.direccion;
             encontrado = true;
+            bitacoralogProveedores.insertar(usuario, 4013, "Proveedores", "Buscar Proveedor");
             break;
         }
     }
@@ -228,11 +221,10 @@ void Proveedor::buscarProveedor() {
 }
 
 // Modifica un proveedor existente buscando por código y pidiendo nuevos datos
-// Parámetros: ninguno
-// Retorna: void
 void Proveedor::modificarProveedor() {
     limpiarPantalla();
     string codigo;
+    cout << "\nUsuario: " << usuario << endl;
     cout << "\n=== Modificar Proveedor ===";
     cout << "\nCódigo: "; getline(cin, codigo);
 
@@ -253,6 +245,7 @@ void Proveedor::modificarProveedor() {
     if (modificado) {
         ordenarProveedores(proveedores);
         guardarProveedores(proveedores);
+        bitacoralogProveedores.insertar(usuario, 4014, "Proveedores", "Modificar Proveedor");
         cout << "\nProveedor modificado exitosamente.";
     } else {
         cout << "\nProveedor no encontrado.";
@@ -262,10 +255,9 @@ void Proveedor::modificarProveedor() {
 }
 
 // Muestra todos los proveedores registrados
-// Parámetros: ninguno
-// Retorna: void
 void Proveedor::desplegarProveedores() {
     limpiarPantalla();
+    cout << "\nUsuario: " << usuario << endl;
     cout << "\n=== Proveedores Registrados ===\n";
 
     vector<Proveedor> proveedores = cargarProveedores();
@@ -280,6 +272,7 @@ void Proveedor::desplegarProveedores() {
             cout << "\nDirección : " << p.direccion;
         }
         cout << "\n-----------------------------";
+        bitacoralogProveedores.insertar(usuario, 4015, "Proveedores", "Desplegar Proveedores");
     }
 
     pausar();

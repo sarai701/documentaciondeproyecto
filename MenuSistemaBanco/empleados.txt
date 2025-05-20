@@ -1,3 +1,2 @@
-,,,
-Julian,006,Supervisor,49434343
-Karla,555,supervisor,234
+Fernando,1,Supervisor,23765434
+Josue,12,Obrero,12435643
