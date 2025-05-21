@@ -1,0 +1,3 @@
+Fernando,1,Supervisor,23765434
+Josue,12,Obrero,12435643
+Julio,010,Gerente,949394394
